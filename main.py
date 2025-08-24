@@ -82,6 +82,14 @@ while run:
         speed_x *= -1
         speed_y *= 1
 
+    if ball.rect.x < 0:
+        finish = True
+        window.blit(lose_2, (200, 200))
+
+    if ball.rect.x > win_width:
+        finish = True
+        window.blit(lose_2, (200, 200))
+
     racket1.reset()
     racket2.reset()
     ball.reset()
